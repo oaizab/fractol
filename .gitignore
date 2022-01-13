@@ -1,0 +1,13 @@
+.*
+*/.*
+*.o
+!.gitignore
+a.out
+.vscode
+libft.a
+*/*/libft.a
+fractol
+*/*/fractol
+obj/
+main.c
+test/*
