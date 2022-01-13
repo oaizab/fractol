@@ -6,7 +6,7 @@
 /*   By: oaizab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 05:07:52 by oaizab            #+#    #+#             */
-/*   Updated: 2022/01/13 22:10:14 by oaizab           ###   ########.fr       */
+/*   Updated: 2022/01/14 00:09:33 by oaizab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ t_fractfunc	*ft_load_function(int fractid)
 		return (mandelbrot);
 	else if (fractid == JULIA)
 		return (julia);
+	else if (fractid == BURNING_SHIP)
+		return (burning_ship);
 	return (NULL);
 }
 

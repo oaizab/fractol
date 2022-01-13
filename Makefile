@@ -1,7 +1,7 @@
 SDIR	=	src
 SRCS	=	main.c events.c images.c colors.c init.c \
 			fractals/mandelbrot.c fractals/julia.c \
-			complex.c manupilation.c
+			complex.c manupilation.c fractals/burning_ship.c
 
 ODIR	=	obj
 OBJS	=	$(addprefix $(ODIR)/,$(SRCS:.c=.o))

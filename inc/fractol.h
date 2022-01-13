@@ -6,7 +6,7 @@
 /*   By: oaizab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 03:35:37 by oaizab            #+#    #+#             */
-/*   Updated: 2022/01/13 21:52:33 by oaizab           ###   ########.fr       */
+/*   Updated: 2022/01/14 00:21:01 by oaizab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,8 @@
 
 # define MANDELBROT 1
 # define JULIA 2
-# define MULTI_MANDELBROT 3
+# define BURNING_SHIP 3
+# define MULTI_MANDELBROT 4
 
 //
 // Defining struct types
@@ -95,6 +96,7 @@ typedef struct s_complex
 {
 	double	re;
 	double	im;
+	double	tmp;
 }				t_complex;
 
 //
@@ -123,6 +125,7 @@ double		ft_magnitude(t_complex c);
 
 void		mandelbrot(t_env *env);
 void		julia(t_env *env);
+void		burning_ship(t_env *env);
 
 //
 // Envirenment functions
