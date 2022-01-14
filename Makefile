@@ -23,21 +23,17 @@ LIBS	=	-L/usr/local/lib -lmlx -Llibft/lib -lft -framework OpenGL -framework AppK
 INCLUDE	=	-I/usr/local/include -I$(IDIR) -Ilibft/inc
 
 all: $(NAME)
-	@echo "fractol done"
 
 run: all
 	@$(OUTPUT)/$(NAME)
 
 $(ODIR)/%.o: $(SDIR)/%.c $(HEADER)
 	@mkdir -p $(@D)
-	@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
+	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(NAME): $(OBJS)
-	@echo "libft ..."
 	@make -C libft
-	@echo "libft done"
-	@mkdir -p $(OUTPUT)
-	@$(CC) $(OBJS) $(LIBS) -o $(OUTPUT)/$(NAME)
+	$(CC) $(OBJS) $(LIBS) -o $(OUTPUT)/$(NAME)
 
 clean:
 	@make -C libft clean

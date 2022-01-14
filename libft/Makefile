@@ -27,11 +27,11 @@ all:		$(NAME) bonus
 
 $(ODIR)/%.o: $(SDIR)/%.c $(HEADER)
 			@mkdir -p $(@D)
-			@$(CC) $(CFLAGS) -I$(IDIR) -c $< -o $@
+			$(CC) $(CFLAGS) -I$(IDIR) -c $< -o $@
 
 $(NAME):	$(OBJS)
 			@mkdir -p $(OUTPUT)
-			@$(AR) $(OUTPUT)/$(NAME) $(OBJS)
+			$(AR) $(OUTPUT)/$(NAME) $(OBJS)
 
 bonus:		$(BOBJS)
 			@$(AR) $(OUTPUT)/$(NAME) $(BOBJS)
