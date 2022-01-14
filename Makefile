@@ -40,8 +40,13 @@ $(NAME): $(OBJS)
 	@$(CC) $(OBJS) $(LIBS) -o $(OUTPUT)/$(NAME)
 
 clean:
-	@make -C libft fclean
-	@rm -rf $(ODIR) $(OUTPUT)
+	@make -C libft clean
+	@rm -rf $(ODIR)
 
-echo:
-	@echo $(HEADER)
+fclean: clean
+	@make -C libft fclean
+	@rm -rf $(OUTPUT)
+
+re: fclean all
+
+.PHONY: all clean fclean re run
