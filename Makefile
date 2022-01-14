@@ -41,7 +41,7 @@ clean:
 
 fclean: clean
 	@make -C libft fclean
-	@rm -rf $(OUTPUT)
+	@rm -rf $(NAME)
 
 re: fclean all
 
