@@ -6,7 +6,7 @@
 /*   By: oaizab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 05:08:08 by oaizab            #+#    #+#             */
-/*   Updated: 2022/01/13 19:52:43 by oaizab           ###   ########.fr       */
+/*   Updated: 2022/01/14 01:19:07 by oaizab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,18 +61,20 @@ void	ft_show_info(t_env *env)
 
 	if (env->fractid == JULIA)
 		str_1 = ft_strjoin("Fractal : ", "Julia");
+	else if (env->fractid == BURNING_SHIP)
+		str_1 = ft_strjoin("Fractal : ", "Busning Ship");
 	else
 		str_1 = ft_strjoin("Fractal : ", "Mandelbrot");
-	mlx_string_put(env->mlx, env->window, 10, 10, 0x054A40, str_1);
+	mlx_string_put(env->mlx, env->window, 10, 10, 0xFFFFFF, str_1);
 	free(str_1);
 	tmp = ft_itoa(env->color_index);
 	str_1 = ft_strjoin("Color Palette : ", tmp);
 	free(tmp);
-	mlx_string_put(env->mlx, env->window, 10, 30, 0x054A40, str_1);
+	mlx_string_put(env->mlx, env->window, 10, 30, 0xFFFFFF, str_1);
 	free(str_1);
 	tmp = ft_itoa(env->max_iter);
 	str_1 = ft_strjoin("Max Iter : ", tmp);
 	free(tmp);
-	mlx_string_put(env->mlx, env->window, 10, 50, 0x054A40, str_1);
+	mlx_string_put(env->mlx, env->window, 10, 50, 0xFFFFFF, str_1);
 	free(str_1);
 }
