@@ -14,7 +14,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 NAME	=	fractol
 HEADER	=	$(addprefix $(IDIR)/,$(INCL))
 
-OUTPUT	=	bin
+OUTPUT	=	./
 
 CC		=	cc
 
@@ -37,7 +37,6 @@ $(NAME): $(OBJS)
 	@make -C libft
 	@echo "libft done"
 	@mkdir -p $(OUTPUT)
-	@cp -r colors $(OUTPUT)/
 	@$(CC) $(OBJS) $(LIBS) -o $(OUTPUT)/$(NAME)
 
 clean:
