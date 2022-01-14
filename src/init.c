@@ -6,7 +6,7 @@
 /*   By: oaizab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 05:07:52 by oaizab            #+#    #+#             */
-/*   Updated: 2022/01/14 00:09:33 by oaizab           ###   ########.fr       */
+/*   Updated: 2022/01/14 01:34:06 by oaizab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,12 +44,14 @@ t_env	*ft_init_env(void *mlx, int width, int height)
 
 t_fractfunc	*ft_load_function(int fractid)
 {
-	if (fractid == MANDELBROT || fractid == MULTI_MANDELBROT)
+	if (fractid == MANDELBROT)
 		return (mandelbrot);
 	else if (fractid == JULIA)
 		return (julia);
 	else if (fractid == BURNING_SHIP)
 		return (burning_ship);
+	else if (fractid == MULTI_MANDELBROT)
+		return (multi_mandelbrot);
 	return (NULL);
 }
 

@@ -6,7 +6,7 @@
 /*   By: oaizab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/11 03:35:37 by oaizab            #+#    #+#             */
-/*   Updated: 2022/01/14 00:21:01 by oaizab           ###   ########.fr       */
+/*   Updated: 2022/01/14 01:34:01 by oaizab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,6 +126,7 @@ double		ft_magnitude(t_complex c);
 void		mandelbrot(t_env *env);
 void		julia(t_env *env);
 void		burning_ship(t_env *env);
+void		multi_mandelbrot(t_env *env);
 
 //
 // Envirenment functions
