@@ -6,7 +6,7 @@
 /*   By: oaizab <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 19:30:01 by oaizab            #+#    #+#             */
-/*   Updated: 2022/01/13 22:08:56 by oaizab           ###   ########.fr       */
+/*   Updated: 2022/01/14 20:00:02 by oaizab           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,11 @@ void	reset(t_env *env)
 void	key_press_extend(t_env *env, int keycode)
 {
 	if (keycode == KEY_PLUS)
-		env->max_iter += 15;
+		env->max_iter += 10;
 	if (keycode == KEY_MINUS)
 	{
 		if (env->max_iter > 50)
-			env->max_iter -= 15;
+			env->max_iter -= 10;
 	}
 	if (keycode == KEY_Z && env->fractid == MULTI_MANDELBROT)
 	{
